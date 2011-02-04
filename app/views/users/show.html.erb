@@ -1,0 +1,4 @@
+<h1>Profile of: <%= @user.username %></h1>
+<p>First: <%= @user.first_name %></p>
+<p>Last: <%= @user.last_name %></p>
+<%= link_to "Edit Profile", edit_user_path(@user) if @user == current_user || current_user.is_admin? %>

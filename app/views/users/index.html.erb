@@ -1,0 +1,10 @@
+<ul class="users">
+  <% if !@users.blank? %>
+    <% for user in @users %>
+      <li><%= link_to(user.username, user) %> <%= user.approved? ? "approved" : "pending" %></li>
+    <% end %>
+  <% else %>
+    <li>Whoops! There's no users. That shouldn't be possible as you need to be logged in to see this page :(</li>
+  <% end %>
+  
+</ul>
